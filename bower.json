@@ -1,0 +1,30 @@
+{
+  "name": "svg-iconset",
+  "description": "",
+  "main": "dist/svg-iconset.js",
+  "authors": [
+    "Glenn Vandeuren <vandeurenglenn@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "svg",
+    "icon",
+    "set",
+    "iconset"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "custom-elements": "webcomponents/custom-elements#^1.0.0-alpha.3",
+    "svg-icon": "vandeurenglenn/svg-icon"
+  },
+  "devDependencies": {
+    "marked": "^0.3.6"
+  }
+}
