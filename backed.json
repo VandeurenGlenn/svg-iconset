@@ -1,0 +1,22 @@
+{
+  "bundles": [
+    {
+      "src": "src/svg-iconset.js",
+      "dest": "dist/svg-iconset.js",
+      "babel": {
+        "presets": [
+          [
+            "es2015",
+            {
+              "modules": false
+            }
+          ]
+        ],
+        "plugins": [
+          "external-helpers"
+        ]
+      }
+    }
+  ],
+  "format": ["iife", "es"]
+}

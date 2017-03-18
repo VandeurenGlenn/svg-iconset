@@ -2,7 +2,7 @@
 /**
  * @extends HTMLElement
  */
-export default class SvgIconset extends HTMLElement {
+export default Backed(class SvgIconset extends HTMLElement {
   /**
    * Attributes to observe
    *
@@ -166,5 +166,4 @@ export default class SvgIconset extends HTMLElement {
     }
     return null;
   }
-}
-customElements.define('svg-iconset', SvgIconset);
+});
