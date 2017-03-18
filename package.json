@@ -2,6 +2,8 @@
   "name": "svg-iconset",
   "description": "",
   "main": "dist/svg-iconset.js",
+  "module": "dist/svg-iconset-es.js",
+  "version": "0.1.1",
   "authors": [
     "Glenn Vandeuren <vandeurenglenn@gmail.com>"
   ],
