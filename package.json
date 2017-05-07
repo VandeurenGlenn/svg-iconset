@@ -14,7 +14,7 @@
     "iconset"
   ],
   "files": [
-    "lib",
+    "dist",
     "svg-iconset.html"
   ],
   "homepage": "",
@@ -56,9 +56,13 @@
         }
       }
     ],
-    "watch": [{
-      "task": "build",
-      "src": ["src/**/*.js"]
-    }]
+    "watch": [
+      {
+        "task": "build",
+        "src": [
+          "src/**/*.js"
+        ]
+      }
+    ]
   }
 }
