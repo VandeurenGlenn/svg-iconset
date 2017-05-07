@@ -13,15 +13,9 @@ export default Backed(class SvgIconset extends HTMLElement {
     return ['name', 'theme', 'size'];
   }
   /**
-   * Calls super
-   */
-  constructor() {
-    super();
-  }
-  /**
    * Runs whenever inserted into document
    */
-  connectedCallback() {
+  connected() {
     this.style.display = 'none';
   }
   // Getters
@@ -92,7 +86,7 @@ export default Backed(class SvgIconset extends HTMLElement {
    * @param {string} icon The name of the icon to show
    */
   applyIcon(element, icon) {
-    element = element.root || element;
+    element = element.shadowRoot || element.root || element;
     this.removeIcon(element);
     this._cloneIcon(icon).then(icon => {
       element.insertBefore(icon, element.childNodes[0]);
@@ -107,7 +101,7 @@ export default Backed(class SvgIconset extends HTMLElement {
    */
   removeIcon(element) {
     // Remove old svg element
-    element = element.root || element;
+    element = element.shadowRoot || element.root || element;
     if (element._iconSetIcon) {
       element.removeChild(element._iconSetIcon);
       element._iconSetIcon = null;

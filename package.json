@@ -2,7 +2,6 @@
   "name": "svg-iconset",
   "description": "",
   "main": "dist/svg-iconset.js",
-  "module": "dist/svg-iconset-es.js",
   "version": "0.1.1",
   "authors": [
     "Glenn Vandeuren <vandeurenglenn@gmail.com>"
@@ -14,6 +13,10 @@
     "set",
     "iconset"
   ],
+  "files": [
+    "lib",
+    "svg-iconset.html"
+  ],
   "homepage": "",
   "ignore": [
     "**/.*",
@@ -24,11 +27,38 @@
   ],
   "dependencies": {
     "@webcomponents/custom-elements": "webcomponents/custom-elements",
-    "backed": "^0.1.0",
+    "backed": "^0.3.3",
     "svg-icon": "vandeurenglenn/svg-icon"
   },
   "devDependencies": {
     "babel-plugin-external-helpers": "^6.22.0",
     "marked": "^0.3.6"
+  },
+  "backed": {
+    "bundles": [
+      {
+        "src": "src/svg-iconset.js",
+        "dest": "dist/svg-iconset.js",
+        "format": "iife",
+        "moduleName": "SvgIconset",
+        "babel": {
+          "presets": [
+            [
+              "es2015",
+              {
+                "modules": false
+              }
+            ]
+          ],
+          "plugins": [
+            "external-helpers"
+          ]
+        }
+      }
+    ],
+    "watch": [{
+      "task": "build",
+      "src": ["src/**/*.js"]
+    }]
   }
 }

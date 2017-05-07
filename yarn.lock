@@ -3,8 +3,8 @@
 
 
 "@webcomponents/custom-elements@webcomponents/custom-elements", custom-elements@webcomponents/custom-elements:
-  version "1.0.0-alpha.4"
-  resolved "https://codeload.github.com/webcomponents/custom-elements/tar.gz/1b2ad174411aab7cccb8231214399bb033dd5d49"
+  version "1.0.0-rc.4"
+  resolved "https://codeload.github.com/webcomponents/custom-elements/tar.gz/1a67576345374222776c50141411fc4e63ecf717"
 
 babel-plugin-external-helpers@^6.22.0:
   version "6.22.0"
@@ -20,8 +20,12 @@ babel-runtime@^6.22.0:
     regenerator-runtime "^0.10.0"
 
 backed@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/backed/-/backed-0.1.0.tgz#15ece1d774d317cf8378d660774df4dd9fe166f4"
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/backed/-/backed-0.1.2.tgz#9e39e227f3c8074c89f58091f8a4b74522efae4f"
+
+backed@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/backed/-/backed-0.3.3.tgz#b00a7d962f01077f97017841a62b0709dd803ca0"
 
 core-js@^2.4.0:
   version "2.4.1"
@@ -32,12 +36,12 @@ marked@^0.3.6:
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
 
 regenerator-runtime@^0.10.0:
-  version "0.10.3"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.3.tgz#8c4367a904b51ea62a908ac310bf99ff90a82a3e"
+  version "0.10.5"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
 
 svg-icon@vandeurenglenn/svg-icon:
   version "0.1.1"
-  resolved "https://codeload.github.com/vandeurenglenn/svg-icon/tar.gz/6dbf26e160cc95e6a5377814b15b4bbea65c0610"
+  resolved "https://codeload.github.com/vandeurenglenn/svg-icon/tar.gz/5d8974eb72329fb567758c2e6aff6bf6b5f230d5"
   dependencies:
     backed "^0.1.0"
     custom-elements webcomponents/custom-elements
