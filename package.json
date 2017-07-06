@@ -1,8 +1,8 @@
 {
   "name": "svg-iconset",
   "description": "",
-  "main": "dist/svg-iconset.js",
-  "version": "0.3.1",
+  "main": "svg-iconset.html",
+  "version": "0.4.0",
   "authors": [
     "Glenn Vandeuren <vandeurenglenn@gmail.com>"
   ],
@@ -33,36 +33,5 @@
   "devDependencies": {
     "babel-plugin-external-helpers": "^6.22.0",
     "marked": "^0.3.6"
-  },
-  "backed": {
-    "bundles": [
-      {
-        "src": "src/svg-iconset.js",
-        "dest": "dist/svg-iconset.js",
-        "format": "iife",
-        "moduleName": "SvgIconset",
-        "babel": {
-          "presets": [
-            [
-              "es2015",
-              {
-                "modules": false
-              }
-            ]
-          ],
-          "plugins": [
-            "external-helpers"
-          ]
-        }
-      }
-    ],
-    "watch": [
-      {
-        "task": "build",
-        "src": [
-          "src/**/*.js"
-        ]
-      }
-    ]
   }
 }

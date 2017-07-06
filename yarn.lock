@@ -19,13 +19,9 @@ babel-runtime@^6.22.0:
     core-js "^2.4.0"
     regenerator-runtime "^0.10.0"
 
-backed@^0.1.0:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/backed/-/backed-0.1.2.tgz#9e39e227f3c8074c89f58091f8a4b74522efae4f"
-
 backed@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/backed/-/backed-0.3.3.tgz#b00a7d962f01077f97017841a62b0709dd803ca0"
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/backed/-/backed-0.3.4.tgz#a42d340539f7db6fff5a36a2df5273e56e069844"
 
 core-js@^2.4.0:
   version "2.4.1"
@@ -40,8 +36,8 @@ regenerator-runtime@^0.10.0:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
 
 svg-icon@vandeurenglenn/svg-icon:
-  version "0.1.1"
-  resolved "https://codeload.github.com/vandeurenglenn/svg-icon/tar.gz/5d8974eb72329fb567758c2e6aff6bf6b5f230d5"
+  version "0.3.0"
+  resolved "https://codeload.github.com/vandeurenglenn/svg-icon/tar.gz/7d6412edfd7015b6832072d92cc46c74794bed79"
   dependencies:
-    backed "^0.1.0"
+    backed "^0.3.3"
     custom-elements webcomponents/custom-elements
