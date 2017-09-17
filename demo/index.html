@@ -20,12 +20,16 @@
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
 
     <!-- Web Components -->
-    <script src="../bower_components/custom-elements/custom-elements.min.js"></script>
-    <script src="../bower_components/marked/marked.min.js"></script>
-    <link rel="import" href="../node_modules/backed/backed.html">
+    <script src="../../@webcomponents/custom-elements/custom-elements.min.js"></script>
+    <script src="../../marked/marked.min.js"></script>
 
-    <link rel="import" href="../bower_components/svg-icon/svg-icon.html">
-    <link rel="import" href="../svg-iconset.html">
+    <script type="module">
+      import '../custom-svg-iconset.js';
+      import '../node_modules/custom-svg-icon/custom-svg-icon.js';
+    </script>
+
+    <script src="../custom-svg-iconset.js" nomodule></script>
+    <script src="../node_modules/custom-svg-icon/custom-svg-icon.js" nomodule></script>
 
     <style>
       body {

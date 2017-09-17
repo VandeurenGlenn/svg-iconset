@@ -1,8 +1,9 @@
 {
-  "name": "svg-iconset",
+  "name": "custom-svg-iconset",
   "description": "",
-  "main": "svg-iconset.html",
-  "version": "0.4.0",
+  "main": "custom-svg-iconset.js",
+  "module": "src/custom-svg-iconset.js",
+  "version": "0.9.0-preview",
   "authors": [
     "Glenn Vandeuren <vandeurenglenn@gmail.com>"
   ],
@@ -14,24 +15,29 @@
     "iconset"
   ],
   "files": [
-    "dist",
-    "svg-iconset.html"
+    "custom-svg-iconset.js",
+    "src/custom-svg-iconset.js"
   ],
   "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
     "test",
     "tests"
   ],
   "dependencies": {
-    "@webcomponents/custom-elements": "webcomponents/custom-elements",
-    "backed": "^0.3.3",
-    "svg-icon": "vandeurenglenn/svg-icon"
+    "@webcomponents/custom-elements": "webcomponents/custom-elements"
   },
   "devDependencies": {
-    "babel-plugin-external-helpers": "^6.22.0",
     "marked": "^0.3.6"
+  },
+  "backed": {
+    "uglify": true,
+    "bundles": [{
+      "src": "src/custom-svg-iconset.js",
+      "dest": "custom-svg-iconset.js",
+      "format": "iife",
+      "moduleName": "customSvgIconSet"
+    }]
   }
 }
