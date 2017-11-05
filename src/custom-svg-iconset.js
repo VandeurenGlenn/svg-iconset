@@ -19,12 +19,12 @@ export default ((base = HTMLElement) => {
      */
     constructor() {
       super();
-      this.style.display = 'none';
     }
     connectedCallback() {
       if (!this.hasAttribute('name')) {
         this.name = this.name;
       }
+      this.style.display = 'none';
     }
     // Getters
     /**
