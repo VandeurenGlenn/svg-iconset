@@ -3,7 +3,7 @@
   "description": "",
   "main": "custom-svg-iconset.js",
   "module": "src/custom-svg-iconset.js",
-  "version": "0.9.0-preview",
+  "version": "0.9.0",
   "authors": [
     "Glenn Vandeuren <vandeurenglenn@gmail.com>"
   ],

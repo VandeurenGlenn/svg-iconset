@@ -9,12 +9,12 @@ var customSvgIconset = ((base = HTMLElement) => {
     }
     constructor() {
       super();
-      this.style.display = 'none';
     }
     connectedCallback() {
       if (!this.hasAttribute('name')) {
         this.name = this.name;
       }
+      this.style.display = 'none';
     }
     get name() {
       return this._name || 'icons';
@@ -96,7 +96,7 @@ var customSvgIconset = ((base = HTMLElement) => {
       return null;
     }
   });
-});
+})();
 
 return customSvgIconset;
 
