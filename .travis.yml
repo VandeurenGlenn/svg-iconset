@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- '7'
+- '8'
+- '9'
+cache:
+  yarn: true
+  directories:
+    - 'node_modules'
+    - $(npm config get prefix)/lib/node_modules
+before_script:
+- npm install -g backed-cli
+- backed -b
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: vandeurenglenn
+  api_key:
+    secure: tjylWBTn64RNZFjWWdIr1dA4b4LQ9EgbMf+AfQX1T/9JVoMtwi/n6rxWESWNKTozJ4wjMHkKS9imszRbwppFvXc3GRDrwXnFXS3PGZNIuiIwLzxncBz4WkKfUk+jgGVMlJgEIL+Xrfof8K5TuiLtVnhum2JjGs/oGm685KinARJ7HIjq7Rwb7glqlX77smL/bJjjUkijqnWM0wDs5NB6gVGy37DU80g6m5hOaZ19cPy+G/Uw6qc/O/3ZUtDQNlGf4Aii/t2nocerUmoQCjYntUXJgo0oqqwKCcib2MGLFTEcOreZywdXZsM4lpkkqHDvpWbBbgTQmfIpgesyIFY+39yd1WPcxCsywIM0tao5Z5+xkTr+aCK/qCGyVrbIBDd4dR3QfKFb3bmdelHWSM1Ufl7iuNDXXCZfvt7MI8Mho4kwS8SCIZ0O0Wj1Ge2ZH0svi/eTHJNUfNK8hw/aod3b9K/GVdN6Ytkl3LIU8h1uPsgX5+NbC+xlhvOJ4LZaYawEqqt5VDZTCVysG01YiM8CHhBles9uXhwH1ByPOn4X25UwQut+T6XwDQvPeinRVFKYaghIZogv6/1c2qBGKqhI7w7KO6p3Or5kVyrJnc+KWpiwdTzZr7lZsGWzB2sn9DkS7p0cTavsZdCbbmZS5dVtj/q+xHucC3sjlLikuscUDDQ=
+  on:
+    tags: true
+    repo: VandeurenGlenn/svg-iconset
