@@ -25,12 +25,6 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "@webcomponents/custom-elements": "webcomponents/custom-elements"
-  },
-  "devDependencies": {
-    "marked": "^0.3.6"
-  },
   "backed": {
     "uglify": true,
     "bundles": [{
