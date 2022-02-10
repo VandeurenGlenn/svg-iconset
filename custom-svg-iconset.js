@@ -5,7 +5,7 @@ var customSvgIconset = ((base = HTMLElement) => {
   window.svgIconset = window.svgIconset || {};
   customElements.define('custom-svg-iconset', class CustomSvgIconset extends base {
     static get observedAttributes() {
-      return ['name', 'theme', 'size'];
+      return ['name', 'theme', 'size', 'width', 'height'];
     }
     constructor() {
       super();
@@ -22,8 +22,14 @@ var customSvgIconset = ((base = HTMLElement) => {
     get theme() {
       return this._theme || 'light';
     }
+    get width() {
+      return this.getAttribute('width') || 24;
+    }
+    get height() {
+      return this.getAttribute('height') || 24;
+    }
     get size() {
-      return this._size || 24;
+      return this._size || { width: this.width, height: this.height };
     }
     set name(value) {
       if (this._name !== value) {
@@ -41,7 +47,13 @@ var customSvgIconset = ((base = HTMLElement) => {
       this._theme = value;
     }
     set size(value) {
-      this._size = value;
+      let width;
+      let height;
+      if (!Array.isArray(value)) {
+        width = 24;
+        height = 24;
+      }
+      this._size = { width, height };
     }
     attributeChangedCallback(name, oldVal, newVal) {
       if (oldVal !== newVal) {
@@ -85,7 +97,7 @@ var customSvgIconset = ((base = HTMLElement) => {
       if (sourceSvg) {
         var content = sourceSvg.cloneNode(true),
             svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg'),
-            viewBox = content.getAttribute('viewBox') || '0 0 ' + size + ' ' + size,
+            viewBox = content.getAttribute('viewBox') || '0 0 ' + width + ' ' + height,
             cssText = 'pointer-events: none; display: block; width: 100%; height: 100%;';
         svg.setAttribute('viewBox', viewBox);
         svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
