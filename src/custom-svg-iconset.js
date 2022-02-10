@@ -12,7 +12,7 @@ export default ((base = HTMLElement) => {
      * @return {array} ['name', 'theme', size]
      */
     static get observedAttributes() {
-      return ['name', 'theme', 'size'];
+      return ['name', 'theme', 'size', 'width', 'height'];
     }
     /**
      * Runs whenever inserted into document
@@ -42,13 +42,21 @@ export default ((base = HTMLElement) => {
     get theme() {
       return this._theme || 'light';
     }
+
+    get width() {
+      return this.getAttribute('width') || 24
+    }
+
+    get height() {
+      return this.getAttribute('height') || 24
+    }
     /**
      * The size for the icons
      * @default {number} 24
      * @return {number}
      */
     get size() {
-      return this._size || 24;
+      return this._size || { width: this.width, height: this.height };
     }
     // Setters
     /**
@@ -72,11 +80,16 @@ export default ((base = HTMLElement) => {
       }
       this._theme = value;
     }
-    /**
-     * @private
-     */
+
     set size(value) {
-      this._size = value;
+      let width
+      let height
+      if (!Array.isArray(value)) {
+        width = 24
+        height = 24
+      }
+      this._size = {width, height};
+
     }
     /**
      * Runs whenever given attribute in observedAttributes has changed
@@ -158,7 +171,7 @@ export default ((base = HTMLElement) => {
       if (sourceSvg) {
         var content = sourceSvg.cloneNode(true),
             svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg'),
-            viewBox = content.getAttribute('viewBox') || '0 0 ' + size + ' ' + size,
+            viewBox = content.getAttribute('viewBox') || '0 0 ' + width + ' ' + height,
             cssText = 'pointer-events: none; display: block; width: 100%; height: 100%;';
         svg.setAttribute('viewBox', viewBox);
         svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
