@@ -93,7 +93,7 @@ var customSvgIconset = ((base = HTMLElement) => {
       });
       return icons;
     }
-    _prepareSvgClone(sourceSvg, size) {
+    _prepareSvgClone(sourceSvg, { width, height }) {
       if (sourceSvg) {
         var content = sourceSvg.cloneNode(true),
             svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg'),
