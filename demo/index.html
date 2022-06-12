@@ -20,8 +20,7 @@
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
 
     <!-- Web Components -->
-    <script src="../../@webcomponents/custom-elements/custom-elements.min.js"></script>
-    <script src="../../marked/marked.min.js"></script>
+    <!-- <script src="../../marked/marked.min.js"></script> -->
 
     <script type="module">
       import '../custom-svg-iconset.js';
@@ -39,7 +38,7 @@
     </style>
   </head>
   <body>
-    <svg-iconset name="icons">
+    <svg-iconset>
       <svg><defs>
         <g id="menu"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></g>
       </defs></svg>
@@ -48,16 +47,16 @@
 
     <span class="explainer"></span>
 
-    <script>
+    <!-- <script>
       let explainer = document.querySelector('.explainer');
       explainer.innerHTML = marked(`
-    <svg-iconset name="icons">
+    <svg-iconset>
       <svg><defs>
         <g id="menu"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></g>
       </defs></svg>
     </svg-iconset>
     <svg-icon icon="menu"></svg-icon>
       `);
-    </script>
+    </script> -->
 </body>
 </html>

@@ -2,7 +2,7 @@
   "name": "custom-svg-iconset",
   "description": "",
   "main": "custom-svg-iconset.js",
-  "module": "src/custom-svg-iconset.js",
+  "module": "custom-svg-iconset.js",
   "version": "0.10.1",
   "authors": [
     "Glenn Vandeuren <vandeurenglenn@gmail.com>"
@@ -15,8 +15,7 @@
     "iconset"
   ],
   "files": [
-    "custom-svg-iconset.js",
-    "src/custom-svg-iconset.js"
+    "custom-svg-iconset.js"
   ],
   "homepage": "",
   "ignore": [
@@ -24,14 +23,5 @@
     "node_modules",
     "test",
     "tests"
-  ],
-  "backed": {
-    "uglify": true,
-    "bundles": [{
-      "src": "src/custom-svg-iconset.js",
-      "dest": "custom-svg-iconset.js",
-      "format": "iife",
-      "moduleName": "customSvgIconSet"
-    }]
-  }
+  ]
 }
